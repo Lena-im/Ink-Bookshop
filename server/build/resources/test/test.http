@@ -1,0 +1,70 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection) or
+# paste cURL into the file and request will be converted to HTTP Request format.
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+//GET http://localhost:8080/LenaBookstoreOrder/api/categories
+//Accept: application/json
+
+###
+
+# curl 'http://localhost:8080/LenaBookstoreOrder/api/orders'
+#  -H 'Connection: keep-alive'
+#  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36'
+#  -H 'Content-Type: application/json'
+#  -H 'Accept: */*'
+#  -H 'Origin: http://localhost:8080'
+#  -H 'Sec-Fetch-Site: same-origin'
+#  -H 'Sec-Fetch-Mode: cors'
+#  -H 'Sec-Fetch-Dest: empty'
+#  -H 'Referer: http://localhost:8080/LenaBookstoreOrder/checkout'
+#  -H 'Accept-Language: zh-CN,zh;q=0.9,en;q=0.8'
+#  -H 'Cookie: _xsrf=2|243d9b1e|baa4017aa3982230173c541d979a84e4|1594307432; username-localhost-8888="2|1:0|10:1594327996|23:username-localhost-8888|44:YzgxZjBkOTg0ZDA3NDhmMWFiMTY3N2E5NTNkMmRlNzA=|03736b0e52b3f4a7775a8f633aa1ea22c41a2e9b6514c1a5bc458ecb1360b6f7"; username-localhost-8889="2|1:0|10:1594582980|23:username-localhost-8889|44:ZjBiYzczYzg0MGMzNGE2N2IwOThmNmUwNzRjOWM4MjE=|b853f988cd2f0ccf44af5744a249cb4fef0049d8de89633321b67e8790557f5c"'
+#  --data-binary '{"cart":{"items":[{"book":{"bookId":1001,"title":"Romance of Three Kingdoms","imageFile":"romance-of-three-kingdoms.png","author":"by Guanzhong Luo","price":799,"isPublic":true,"categoryId":1001},"quantity":1}]},"customerForm":{"name":"NAN LI","address":"2251 Pimmit Drive Apt. #323, #416","phone":"5718884686","email":"im.nan.lee@outlook.com","ccNumber":"4444333322221111","ccExpiryMonth":8,"ccExpiryYear":2020}}'
+#  --compressed
+POST http://localhost:8080/LenaBookstoreTransact/api/orders
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36
+Accept: */*
+Origin: http://localhost:8080
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8080/LenaBookstoreOrder/checkout
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+Cookie: _xsrf=2|243d9b1e|baa4017aa3982230173c541d979a84e4|1594307432; username-localhost-8888="2|1:0|10:1594327996|23:username-localhost-8888|44:YzgxZjBkOTg0ZDA3NDhmMWFiMTY3N2E5NTNkMmRlNzA=|03736b0e52b3f4a7775a8f633aa1ea22c41a2e9b6514c1a5bc458ecb1360b6f7"; username-localhost-8889="2|1:0|10:1594582980|23:username-localhost-8889|44:ZjBiYzczYzg0MGMzNGE2N2IwOThmNmUwNzRjOWM4MjE=|b853f988cd2f0ccf44af5744a249cb4fef0049d8de89633321b67e8790557f5c"
+Content-Type: application/json
+
+{
+  "cart": {
+    "items": [
+      {
+        "book": {
+          "bookId": 1001,
+          "title": "Romance of Three Kingdoms",
+          "imageFile": "romance-of-three-kingdoms.png",
+          "author": "by Guanzhong Luo",
+          "price": 799,
+          "isPublic": true,
+          "categoryId": 1001
+        },
+        "quantity": 1
+      }
+    ]
+  },
+  "customerForm": {
+    "name": "NAN LI",
+    "address": "2251 Pimmit Drive",
+    "phone": "5718884686",
+    "email": "im.nan.lee@outlook.com",
+    "ccNumber": "4444333322221111",
+    "ccExpiryMonth": 2,
+    "ccExpiryYear": 2020
+  }
+}
+
+###
+
